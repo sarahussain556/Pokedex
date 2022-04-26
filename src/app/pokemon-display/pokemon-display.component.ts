@@ -7,19 +7,23 @@ type NavigationObject={
   navigationId:number;
 }
 type Ability={
-  name:string;
+  ability:{name:string}
 }
 @Component({
   selector: 'app-pokemon-display',
   templateUrl: './pokemon-display.component.html',
   styleUrls: ['./pokemon-display.component.css']
 })
+
+
 export class PokemonDisplayComponent implements OnInit {
+  abilities: string[]=[];
 
   // constructor(
   //  // private dataService:DataService
   // ) { }
-  constructor(private location:Location,private dataService:DataService,public abilities:Array<string>){
+  
+  constructor(private location:Location,private dataService:DataService){
 
   }
 
@@ -31,7 +35,9 @@ export class PokemonDisplayComponent implements OnInit {
       this.dataService.getPokemonInfo(navigationObject.navigationId)
       .subscribe((response:any)=>{
         console.log(response);
-        this.abilities=response.abilities.map((ability:Ability)=>{ return ability.name});
+        this.abilities=response.abilities.map((ability:Ability)=>{ 
+          console.log(ability.ability.name,"gugu");
+          return ability.ability.name});
         
      // this.pokemons=[...response.results]
       //console.log(this.pokemons);
