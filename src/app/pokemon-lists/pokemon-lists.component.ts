@@ -18,8 +18,8 @@ export class PokemonListsComponent implements OnInit {
       console.log(response.results);
       this.pokemons=[...response.results]
       console.log(this.pokemons);
-      // response.results.array.forEach((result)=> {
-      //   this.dataService.getPokemonInfo(result.name)
+      // response.results.forEach((result)=> {
+      //   this.dataService.getPokemonInfo(result.id)
       //   .subscribe((response:any)=>{
       //     this.pokemons.push(response);
       //   })

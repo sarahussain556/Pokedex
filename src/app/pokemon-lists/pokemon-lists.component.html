@@ -3,10 +3,9 @@
 <div class="pokemon-grid">
 
   <div class="box" *ngFor="let pokemon of pokemons">
-    {{pokemon.name}}
-    <button class="btn" >
-      Details
-    </button>
+
+    <a [routerLink]="[pokemon.name]">{{pokemon.name}}</a>
+
   </div>
 
  

@@ -12,6 +12,7 @@
   border: 2px solid coral;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: larger;
+  text-decoration: none;
 }
 .btn{
   border-radius: 10px;
