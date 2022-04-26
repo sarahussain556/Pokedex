@@ -1,7 +1,16 @@
 <p>pokemon-lists works!</p>
-<ul>
-<li *ngFor="let pokemon of pokemons">
-  {{pokemon.name}}
-</li>
 
-</ul>
+<div class="pokemon-grid">
+
+  <div class="box" *ngFor="let pokemon of pokemons">
+    {{pokemon.name}}
+    <button class="btn" >
+      Details
+    </button>
+  </div>
+
+ 
+</div>
+
+
+
