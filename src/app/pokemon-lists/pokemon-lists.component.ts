@@ -8,6 +8,7 @@ import { DataService } from '../services/data.service';
 })
 export class PokemonListsComponent implements OnInit {
   pokemons: any[]=[];
+  imageUrl="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"
   constructor(
     private dataService:DataService
   ) { }
